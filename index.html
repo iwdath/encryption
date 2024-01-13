@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Encryption/Decryption</title>
+</head>
+<body>
+  <h1>Text Encryption/Decryption</h1>
+
+  <label for="text">Enter text:</label>
+  <input type="text" id="text" required>
+
+  <label for="mode">Choose mode:</label>
+  <select id="mode">
+    <option value="encrypt">Encrypt</option>
+    <option value="decrypt">Decrypt</option>
+  </select>
+
+  <button onclick="processText()">Submit</button>
+
+  <h2>Result:</h2>
+  <p id="result" style="word-break: break-all;"></p>
+
+  <script src="js/encryption.js"></script>
+</body>
+</html>
