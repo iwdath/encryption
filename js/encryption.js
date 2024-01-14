@@ -1,6 +1,4 @@
-// Define values for each symbol
 const encryptDict = {
-  // Symbols .,! ?:;()[]{}@"'№#$%^&*-=+_/\<>~
   ' ': 'b6a1fab3',
   '.': 'fcb5031b',
   ',': '2ef02489',
@@ -34,7 +32,6 @@ const encryptDict = {
   '>': '07b299a3',
   '~': 'fc52d6e5',
 
-  // Numbers 0123456789
   '0': '23bcc905',
   '1': '14e09ee3',
   '2': 'd52a75e9',
@@ -46,7 +43,6 @@ const encryptDict = {
   '8': '18abe8a7',
   '9': '46f3fd7a',
 
-  // English abcdefghijklmnopqrstuvwxyz
   'a': '3e398c8e',
   'b': '2af27cce',
   'c': '3eda17ac',
@@ -74,7 +70,6 @@ const encryptDict = {
   'y': 'fa426e35',
   'z': '1ea41730',
 
-  // Russian абвгдеёжзийклмнопрстуфхцчшщъыьэюя
   'а': '131578c5',
   'б': '02c7bd13',
   'в': '0db38acb',
@@ -110,7 +105,6 @@ const encryptDict = {
   'я': '5ecb7fe6',
 };
 
-// Create a dictionary for decryption by reversing the key-value pairs of encryptDict
 const decryptDict = {};
 for (const key in encryptDict) {
   decryptDict[encryptDict[key]] = key;
