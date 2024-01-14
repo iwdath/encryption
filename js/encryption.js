@@ -112,7 +112,7 @@ for (const key in encryptDict) {
 
 function encrypt(text) {
   let encryptedText = '';
-  for (const char of text.toLowerCase()) {
+  for (const char of text) {
     if (encryptDict.hasOwnProperty(char)) {
       encryptedText += encryptDict[char];
     } else {
