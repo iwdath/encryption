@@ -1,27 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page" data-overlayscrollbars-initialize>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text Encryption/Decryption</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <title>Encryption/Decryption</title>
+  <link rel="preload" as="font" href="fonts/JetBrainsMonoExtraBold.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/JetBrainsMonoRegular.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/overlayscrollbars.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <h1>Text Encryption/Decryption</h1>
+<body class="page__body" data-overlayscrollbars-initialize>
+  <header class="header">
+    <a class="header__title">Encryption/Decryption</a>
+  </header>
+  <main class="main">
+    <section class="text section">
+      <label class="text__title">Enter text:
+        <textarea class="text__text" required></textarea>
+      </label>
+    </section>
+    <section class="mode section">
+      <label class="mode__title">Choose mode:
+        <select class="mode__list">
+          <option value="encrypt">Encrypt</option>
+          <option value="decrypt">Decrypt</option>
+        </select>
+      </label>
+      <button class="mode__btn" type="button" onclick="processText()">Submit</button>
+    </section>
+    <section class="result section">
+      <h2 class="result__title">Result:</h2>
+      <p class="result__text"></p>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__title">© iwdath</p>
+  </footer>
+  <script src="js/overlayscrollbars.browser.es5.min.js"></script>
+  <script>
+    var {
+      OverlayScrollbars,
+      ScrollbarsHidingPlugin,
+      SizeObserverPlugin,
+      ClickScrollPlugin
+    } = OverlayScrollbarsGlobal;
 
-  <label for="text">Enter text:</label>
-  <input type="text" id="text" required>
-
-  <label for="mode">Choose mode:</label>
-  <select id="mode">
-    <option value="encrypt">Encrypt</option>
-    <option value="decrypt">Decrypt</option>
-  </select>
-
-  <button onclick="processText()">Submit</button>
-
-  <h2>Result:</h2>
-  <p id="result" style="word-break: break-all;"></p>
-
-  <script src="js/encryption.js"></script>
+    OverlayScrollbars(document.querySelector('.page__body'), {
+      scrollbars: {
+        theme: 'os-theme-light',
+      },
+    });
+  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
