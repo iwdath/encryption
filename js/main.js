@@ -196,8 +196,8 @@ function decrypt(text) {
 }
 
 function processText() {
-  const mode = document.getElementById('mode').value;
-  const text = document.getElementById('text').value;
+  const mode = document.querySelector('.mode__list').value;
+  const text = document.querySelector('.text__text').value;
   let result = '';
 
   if (mode === 'encrypt') {
@@ -206,5 +206,5 @@ function processText() {
     result = decrypt(text);
   }
 
-  document.getElementById('result').innerText = result;
+  document.querySelector('.result__text').innerText = result;
 }
